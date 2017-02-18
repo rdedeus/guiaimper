@@ -18,12 +18,12 @@
         "category": "Piscina",
         "materials": [
             {
-                "material": "Manta",
+                "material": "FirstTest",
                 "regularization": 7,
                 "process": 1
             },
             {
-                "material": "Polimérico",
+                "material": "TestData",
                 "regularization": 7,
                 "process": 5
             }

@@ -12,15 +12,20 @@
   <ion-list>
     <ion-item>
       <ion-label>Category</ion-label>
-      <ion-select [(ngModel)]="materialIndex">
+      <ion-select [(ngModel)]="categoryIndex">
         <ion-option *ngFor="let data of dataService.data; let i = index;" [value]="i">{{data.category}}</ion-option>
       </ion-select>
     </ion-item>
-    <ion-item>
+    <ion-item *ngIf="categoryIndex !== -1">
       <ion-label>Materials</ion-label>
-      <ion-select *ngIf="materialIndex !== -1" [(ngModel)]="material">
-        <ion-option *ngFor="let mat of dataService.data[materialIndex].materials">{{mat.material}}</ion-option>
+      <ion-select [(ngModel)]="materialIndex" (ionChange)="getResult()">
+        <ion-option *ngFor="let mat of dataService.data[categoryIndex].materials; let i = index;" [value]="i">{{mat.material}}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
+
+  <div *ngIf="materialIndex !== -1">
+    {{result.regularization}}<hr>
+    {{result.process}}
+  </div>
 </ion-content>
