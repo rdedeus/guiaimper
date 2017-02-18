@@ -14,7 +14,7 @@ import { DataService } from '../pages/shared/data.service';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)

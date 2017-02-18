@@ -10,13 +10,12 @@ import { DataService } from '../shared/data.service';
 })
 export class HomePage {
   // category: any;
-  material: any;
+  // material: any;
   categoryIndex: number;
   materialIndex: number;
   result: any;
 
   constructor(public navCtrl: NavController, private dataService: DataService) {
-    this.material = '';
     this.materialIndex = -1;
     this.categoryIndex = -1;
   }
