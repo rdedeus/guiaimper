@@ -8,5 +8,19 @@
   <h2>Guia Imper</h2>
   <p>Bem-vindo ao Guia Imper</p>
 
-  <button class="btn btn-large btn-default" (click)="print()">Print Out Your Data</button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="materialIndex">
+        <ion-option *ngFor="let data of dataService.data; let i = index;" [value]="i">{{data.category}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Materials</ion-label>
+      <ion-select *ngIf="materialIndex !== -1" [(ngModel)]="material">
+        <ion-option *ngFor="let mat of dataService.data[materialIndex].materials">{{mat.material}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>

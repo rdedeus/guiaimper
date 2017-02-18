@@ -5,21 +5,20 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
-export class DataService{
+export class DataService {
     data: any;
 
-    constructor(private http: Http){
+    constructor(private http: Http) {
         this.sub();
     }
 
-    getData(): Observable<any>{
+    getData(): Observable<any> {
         return this.http.get('../../assets/json/sample.json')
             .map(response => response.json())
-            // .subscribe(response => this.data = response.json())
+        // .subscribe(response => this.data = response.json())
     }
 
-    sub(){
+    sub() {
         this.getData().subscribe(response => this.data = response);
-        console.log('Sample data is working');
     }
 }

@@ -9,8 +9,14 @@ import { DataService } from '../shared/data.service';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  category: any;
+  material: any;
+  materialIndex: number;
 
   constructor(public navCtrl: NavController, private dataService: DataService) {
+    this.category = '';
+    this.material = '';
+    this.materialIndex = -1;
   }
 
   print(){
