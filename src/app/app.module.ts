@@ -5,8 +5,11 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Instructions } from '../pages/instructions/instructions';
+import { InstructionsDirective } from '../pages/instructions/instruction.directive'
 
 import { DataService } from '../pages/shared/data.service';
+import { ResultService } from '../pages/shared/result.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,8 @@ import { DataService } from '../pages/shared/data.service';
     ContactPage,
     HomePage,
     TabsPage,
+    Instructions,
+    InstructionsDirective
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,6 +32,6 @@ import { DataService } from '../pages/shared/data.service';
     HomePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DataService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DataService, ResultService]
 })
 export class AppModule {}
