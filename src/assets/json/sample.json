@@ -1,0 +1,32 @@
+[
+    {
+        "category": "Banheiros",
+        "materials": [
+            {
+                "material": "Manta",
+                "regularization": 5,
+                "process": 1
+            },
+            {
+                "material": "Polimérico",
+                "regularization": 6,
+                "process": 4
+            }
+        ]
+    },
+    {
+        "category": "Piscina",
+        "materials": [
+            {
+                "material": "Manta",
+                "regularization": 7,
+                "process": 1
+            },
+            {
+                "material": "Polimérico",
+                "regularization": 7,
+                "process": 5
+            }
+        ]
+    }
+]
